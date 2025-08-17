@@ -16,6 +16,15 @@ This is a CodeIgniter 4 web application that includes:
 - **Contact Form**: AJAX contact form with server-side processing
 - **Responsive Design**: Mobile-friendly template system
 
+### Screenshoots
+
+<h4>Home</h4>
+<img src="/public/assets/images/home.png" width='600px'/>
+<h4>NY Times News API</h4>
+<img src="/public/assets/images/nytimes-news.png" width='600px'/>
+<h4>Contact Form</h4>
+<img src="/public/assets/images/contact.png" width='600px'/>
+
 ## XAMPP Localhost Setup Instructions
 
 ### Prerequisites

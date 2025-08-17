@@ -1,0 +1,776 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* ***********************************
+*  Mobile first (default)
+*  ***********************************
+*/
+
+/* Header */
+.nav-section {
+    background-color: #111;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+}
+
+#logo {
+    width: 50%;
+}
+
+.nav-section ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-section ul li, .nav-section ul li a {
+    padding: 20px;
+    place-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-section ul li a:hover {
+    font-size: 1.2em;
+    transition: all;
+    transition-duration: 1s;
+}
+
+/* Home */
+
+article img {
+    width: 100%;
+}
+
+article span {
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+section {
+    padding: 50px 10px;
+    border-bottom: solid #000 2px;
+}
+
+section#featured {
+    background: url('../images/principal.avif') no-repeat center;
+    background-size: cover;
+}
+
+section#technology {
+    background: url('../images/tech-bg.jpg') no-repeat center;
+    background-size: cover;
+}
+
+section#politics {
+    background: url('../images/politic-bg.webp') no-repeat center;
+    background-size: cover;
+}
+
+
+section h2, .company-info h2 {
+    text-align: center;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    background-color: #111;
+    padding-bottom: 10px;
+    margin: 0px 20px;
+    
+}
+
+section#featured h2 {
+    box-shadow: -10px -10px #3498db;
+}
+
+section#news h2 {
+    box-shadow: -10px -10px #ff9500;
+    margin-top: 15px;
+}
+
+section#technology h2 {
+    box-shadow: -10px -10px #239b56;
+}
+
+section#politics h2 {
+    box-shadow: -10px -10px #C70039;
+}
+
+section article {
+    border: solid #000 3px;
+    background-color: #fff;
+    margin: 30px;
+    height: max-content;
+    box-shadow: -10px -10px 0px #111;
+}
+
+section article h3 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 18px;
+    padding: 10px;
+}
+
+h2, h3 {
+    font-family: monospace;
+}
+
+/* News */
+#news {
+    padding: 20px;
+    background-image: linear-gradient(-45deg,#ffffff 0%,rgb(100, 0, 134) 51%,#c10037 100%);
+}
+
+.new-title-0, .new-title-1 {
+    margin: 20px 20px 10px 20px;
+    padding: 5px;
+    width: fit-content;
+}
+
+.new-text, .new-title-0 + p, .new-title-1 + p {
+    font-size: 20px;
+    text-align: justify;
+    padding: 15px;
+    background-color: #FFF0E5;
+    border: solid 3px black;
+}
+
+.ind-article {
+    padding: 15px;
+}
+
+.article-text {
+    font-size: 16px;
+    text-align: justify;
+    align-items: center;
+    padding: 15px;
+    background-color: #FFF0E5;
+    border: solid 3px black;
+}
+
+.article-text img {
+    width: 70vw;
+    padding: 8px;
+}
+
+.published-date {
+    padding: 8px;
+}
+
+.new-title-0 + p, .new-title-1 + p {
+    margin: 50px;
+}
+
+.new-title-0 {
+    background-color: #000;
+    font-size: 24px;
+    color: #FFF;
+}
+
+.new-title-1 {
+    background-color: #ff0000;
+    font-size: 28px;
+}
+
+
+.new-text + p a, .article-text + p a {
+    background-color: #2ecc71;
+    padding: 10px;
+    font-size: 16px;
+    font-style: italic;
+    margin: 10px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+
+/* Animation of each article when appearing in the viewport */
+
+.article, .ind-article {
+    opacity: 0;
+    transform: translateY(20px); /* start slightly below the viewport */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.article.visible, .ind-article.visible {
+    opacity: 1;
+    transform: translateY(0); /* slide up into place */
+}
+
+/* The active behavior is when using a mobile device since the browser detects the "tap" trigger */
+.article:hover, .article:active {
+    background-color: #111;
+    color: #fff;
+    box-shadow: -10px -10px 0px #fff;
+}
+
+
+/* About Header Section */
+.about-header {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.about-header img {
+    height: auto;
+    width: 100vw;
+    border: solid 3px #000;
+    border-radius: 8px;
+}
+
+.about-header h1 {
+    margin: 20px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.about-header p {
+    font-size: 16px;
+    padding: 20px;
+    font-style: italic;
+}
+
+/* Company Info Section */
+.company-info {
+    padding: 30px;
+    background: url('../images/about-bg.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.company-info p {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: solid 2px #1a1a1a;
+    box-shadow: -5px -5px 0px #000;
+    font-size: 14px;
+    font-family: 'Times New Roman', serif;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.company-info h2 {
+    box-shadow: -5px -5px 0px #00c76d;
+    margin-top: 50px;
+}
+
+.company-info ul {
+    list-style: none;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border: solid 2px #1a1a1a;
+    box-shadow: -5px -5px 0px #000;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.company-info li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: 'Times New Roman', serif;
+}
+
+/* The active behavior is when using a mobile device since the browser detects the "tap" trigger */
+.company-info p:hover, .company-info p:active, .company-info ul:hover, .company-info ul:active {
+    background-color: #111;
+    color: #fff;
+    box-shadow: -10px -10px 0px #fff;
+}
+
+/* Contact Section */
+.contact-us {
+    padding: 30px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact-us p {
+    font-size: 14px;
+    margin: 20px;
+    font-style: italic;
+}
+
+.contact-us ul {
+    list-style: none;
+}
+
+.contact-us a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-us a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+}
+
+footer em {
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    display: block;
+}
+
+footer p {
+    font-style: italic;
+    font-size: 12px;
+    text-align: justify;
+    padding: 20px;
+}
+
+/* Body Form Page*/
+
+#msg {
+    text-align: center;
+}
+
+.error {
+    font-size: 12px;
+    color: red;
+}
+
+.error-feedback {
+    font-size: 24px;
+    color: red;
+}
+
+.success {
+    font-size: 24px;
+    color: green;
+}
+
+/* Form Page */
+
+section#formPage {
+    background: url('../images/formPage.jpg') no-repeat center;
+    background-size: cover;
+}
+
+#formPage h2 {
+    box-shadow: rgb(0, 113, 0) 10px 8px;
+}
+
+#introduction {
+    margin: 20px;
+    font-size: 24px;
+    text-align: center;
+    background-color: #000000;
+    border: solid #FFF 3px;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+    
+form {
+    max-width: 90vw;
+    color: white;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #17202a;
+    border: 5px solid #000000;
+    border-radius: 12px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+    text-align: left;
+}
+
+input.generatorForm {
+    width: 75%;
+    height: 65%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+input.contactInput {
+    width: 100%;
+    height: 65%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 4px;
+}    
+
+
+/* Submit Button */
+#submit-button, #clear-button {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#submit-button {
+    background-color: #00b44b;
+}
+
+#clear-button {
+    background-color: #FFC300;
+}
+
+#submit-button:hover {
+    background-color: #008f3b;
+}
+
+#clear-button:hover {
+    background-color: #ffd036;
+}
+
+
+/*
+***************************************
+Media Queries
+***************************************
+*/
+
+/* this is for tablet, no less than 480px, no greater than 1024px */
+@media (min-width:480px) and (max-width:1024px) {
+
+    /* Header */
+    .nav-section {
+        font-size: 1.2em;
+    }
+
+    #logo {
+        transform: translateY(-10px);
+        width: 25%;
+    }
+
+    .nav-section ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+
+    .nav-section ul li a:hover {
+        font-size: 1.5em;
+    }
+
+    
+    /* Home */
+
+    article img {
+        width: 100%;
+    }
+
+    article {
+        width: 40%;
+    }
+
+    article span {
+        font-size: 20px;
+    }
+
+    .news-group {
+        padding: 30px 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    section h2 {
+        padding: 20px;
+        margin: auto;
+        width: 50%;
+        font-size: 40px;
+        
+    }
+
+    section article h3 {
+        font-size: 28px;
+    }
+
+
+    /* About Header Section */
+
+    .about-header, .company-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-header img {
+        height: auto;
+        width: 80vw;
+        align-self: center;
+    }
+
+    .about-header h1 {
+        font-size: 40px;
+    }
+
+    .about-header p {
+        font-size: 20px;
+        width: 80%;
+    }
+
+    /* Company Info Section */
+    .company-info {
+        align-items: center;    
+    }
+
+    .company-info p {
+        font-size: 18px;
+        width: 70%;
+    }
+
+    .company-info h2 {
+        margin-top: 20px;
+        font-size: 36px;
+    }
+
+    .company-info li {
+        font-size: 18px;
+        width: fit-content;
+    }
+
+    /* Contact Section */
+    .contact-us p {
+        font-size: 18px;
+    }
+
+    /* Form Styles */
+
+    form {
+        font-size: 2em;
+        width: 80%;
+    }
+
+    /* Footer */
+
+    footer em {
+        font-size: 24px;
+    }
+
+    footer p {
+        font-size: 20px;
+    }
+
+    /* New York Times API webpage */
+
+    .article-text img {
+        height: auto;
+        width: 100%;
+    }   
+    
+    .article-text {
+        font-size: 18px;
+    }
+
+    .published-date {
+        text-align: center;
+    }
+
+}
+
+
+/*this is for desktop, greater than 1024*/
+@media (min-width:1024px) {
+
+    /* Header */
+    .nav-section {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+
+    .nav-section ul li {
+        padding: 10px;
+    }
+
+    #logo {
+        width: 55%;
+    }
+
+    .nav-section ul {
+        flex-direction: row;
+    }
+
+    .nav-section ul li {
+        width: 100%;
+    }
+
+
+    .nav-section ul li a:hover {
+        font-size: 1.2em;
+    }
+
+    /* Home */
+
+    article .content img {
+        width: 55%;
+        height: 55%;
+        border: solid 3px #000;
+        align-self: center;
+    }
+
+    article {
+        width: 45%;
+        height: max-content;
+        padding: 15px;
+    }
+
+    article .content {
+        display: flex;
+    }
+
+    article span {
+        font-size: 20px;
+        width: 45%;
+        height: auto;
+    }
+
+    .news-group {
+        padding: 30px 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    section h2 {
+        padding: 20px;
+        margin: auto;
+        width: 50%;
+        font-size: 32px;
+        
+    }
+
+    section article h3 {
+        font-size: 24px;
+    }
+
+    /* About Header Section */
+
+    .about-header, .company-info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .about-header {
+        flex-direction: column;  
+        align-items: center;
+        background-color: #f9f9f9;
+        color: #000;
+    }
+
+    .about-header img {
+        height: auto;
+        width: 40vh;
+        align-self: center;
+    }
+
+    .about-header h1 {
+        font-size: 40px;
+    }
+
+    .about-header p {
+        font-size: 20px;
+        width: 80%;
+    }
+
+    /* New York Times API page*/
+    .article-text {
+        font-size: 20px;
+        display: flex;
+        gap: 25px;
+    }
+    
+    .article-text img {
+        height: 200px;
+        width: auto;
+    }
+    
+    .published-date {
+        width: 130%;
+        text-align: center;
+    }
+
+    /* Company Info Section */
+    .company-info {
+        justify-content: space-around;  
+    }
+
+    .company-info .about-item {
+        width: 40%;
+    }
+
+    .company-info p {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .company-info h2 {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    .company-info li {
+        font-size: 18px;
+        width: fit-content;
+    }
+
+    /* Contact Section */
+    .contact-us p {
+        font-size: 18px;
+    }
+
+    .contact-us {
+        background-color: #1a1a1a;
+        color: #fff;
+    }
+
+    .contact-us h2 {
+        background-color: #fff;
+        color: #000;
+    }
+
+    /* Form Styles */
+
+    form {
+        width: 600px;
+    }
+
+    /* Footer */
+
+    footer em {
+        font-size: 22px;
+    }
+
+    footer p {
+        font-size: 18px;
+    }
+
+}
